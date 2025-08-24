@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Video Classifier</title>
+</head>
+<body>
+    <h1>Upload a video for classification</h1>
+    <form action="/predict/" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="video">
+        <button type="submit">Predict</button>
+    </form>
+</body>
+</html>
